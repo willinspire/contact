@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0 maximum-scale=1, user-scalable=no" name="viewport">
+    <title>William Thompson</title>
+    <!-- ****** CSS STYLE DATA ****** -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://resonova.github.io/cdn/css/animate.css">
+    <link rel="stylesheet" href="https://resonova.github.io/cdn/css/fa.css" type="text/css">
+
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <style>
+        /* 
+        ###############################################################################
+        #   SHELL.CSS   #
+        #################
+
+        By h8rt3rmin8r (161803398@email.tg)
+        Adapted from source: https://guides.codechewing.com/mac-terminal-shell-css-html
+
+        ###############################################################################
+        */
+        
+        html {
+            position: relative;
+            min-height: 100%;
+            min-width: 100%;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+        
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            width: 100%;
+            background-image: url('https://willinspire.github.io/content-storage/20180406/background-grid-cells-blue.jpg');
+            background-repeat: repeat;
+        }
+        
+        .container {
+            width: auto;
+            max-width: 610px;
+        }
+        
+        canvas {
+            position: absolute;
+        }
+        
+        .fs-1 {
+        	font-size: 1em;
+        }
+        
+        .fs-2 {
+        	font-size: 0.9em;
+        }
+        
+        .fs-3 {
+        	font-size: 0.8em;
+        }
+        
+        .shell-wrap {
+            max-width: 610px;
+            margin: 100px auto 0 auto;
+            -webkit-border-radius: 3px;
+            -moz-border-radius: 3px;
+            border-radius: 3px;
+        }
+        
+        .shell-top-bar {
+            text-align: left;
+            color: white;
+            padding: 8px 0;
+            margin: 0px;
+            margin-top: 20%;
+            text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.5);
+            background: rgba(21, 68, 140, 0.55);
+            border: 1px solid #15448c;
+            border-bottom: none;
+            -webkit-border-top-left-radius: 3px;
+            -webkit-border-top-right-radius: 3px;
+            -moz-border-radius-topleft: 3px;
+            -moz-border-radius-topright: 3px;
+            border-top-left-radius: 3px;
+            border-top-right-radius: 3px;
+            
+        }
+        
+        .shell-body {
+            margin: 0;
+            padding-top: 15px;
+            padding-bottom: 10px;
+            padding-left: 10px;
+            padding-right: 10px;
+            text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.5);
+            background: rgba(0, 0, 0, 0.55);
+            border: 1px solid #15448c;
+            line-height: 1em;
+            -webkit-border-bottom-right-radius: 3px;
+            -webkit-border-bottom-left-radius: 3px;
+            -moz-border-radius-bottomright: 3px;
+            -moz-border-radius-bottomleft: 3px;
+            border-bottom-right-radius: 3px;
+            border-bottom-left-radius: 3px;
+            -webkit-transition: all 0.5s ease-in-out;
+            -moz-transition: all 0.5s ease-in-out;
+            -o-transition: all 0.5s ease-in-out;
+            transition: all 0.5s ease-in-out;
+        }
+        
+        .shell-body:hover {
+            margin: 0;
+            padding-top: 15px;
+            padding-bottom: 10px;
+            padding-left: 10px;
+            padding-right: 10px;
+            text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.5);
+            background: rgba(0, 0, 0, 0.95);
+            line-height: 1em;
+            -webkit-border-bottom-right-radius: 3px;
+            -webkit-border-bottom-left-radius: 3px;
+            -moz-border-radius-bottomright: 3px;
+            -moz-border-radius-bottomleft: 3px;
+            border-bottom-right-radius: 3px;
+            border-bottom-left-radius: 3px;
+            -webkit-transition: all 0.5s ease-in-out;
+            -moz-transition: all 0.5s ease-in-out;
+            -o-transition: all 0.5s ease-in-out;
+            transition: all 0.5s ease-in-out;
+        }
+        
+        .shell-body .output {
+            word-wrap: break-word;
+            position: relative;
+            padding: 0 0 0 2px;
+            color: white;
+            font-weight: normal;
+        }
+        
+        .shell-body a {
+            color: rgb(59, 128, 255);
+        }
+        
+        .shell-body a:hover {
+            color: rgb(20, 101, 250);
+        }
+        
+        /* RESPONSIVE DESIGN */
+        
+        @media screen and (min-width: 536px) {
+            h1 {
+                font-size: 43px;
+            }
+            h4 {
+                font-size: 1ev;
+            }
+            .shell-body {
+                font-size: 100%;
+            }
+            .shell-body:hover {
+                font-size: 100%;
+            }
+        }
+        
+        @media screen and (max-width: 536px) {
+            h1 {
+                font-size: 42px;
+            }
+            h4 {
+                font-size: 1ev;
+            }
+            .shell-body {
+                font-size: 95%;
+            }
+            .shell-body:hover {
+                font-size: 95%;
+            }
+        }
+        
+        @media screen and (max-width: 535px) {
+            h1 {
+                font-size: 40px;
+            }
+            h4 {
+                font-size: 23px;
+            }
+            .shell-body {
+                font-size: 95%;
+            }
+            .shell-body:hover {
+                font-size: 95%;
+            }
+        }
+        
+        @media screen and (max-width: 501px) {
+            h1 {
+                font-size: 38px;
+            }
+            h4 {
+                font-size: 20px;
+            }
+            .shell-body {
+                font-size: 85%;
+            }
+            .shell-body:hover {
+                font-size: 85%;
+            }
+        }
+    </style>
+
+    <!-- Website scripts -->
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="wrapper">
+            <div class="shell-wrapper">
+                <div class="shell-top-bar">
+                	<div class="output fs-1"><h4>&emsp;WILLIAM THOMPSON</h4></div>
+                    <div class="output fs-2">&emsp;&emsp;Founder & Lead Consultant</div>
+                    <div class="output fs-2">&emsp;&emsp;<a class="output" href="https://resonova.com" style="color: white;">ResoNova International Consulting, LLC</a>
+                    </div><!--<span class="output">___________________________________________</span>
+                    </div>-->
+                </div>
+                <div class="shell-body">
+                    <div class="output">
+                        <span>email&emsp; | <a href="mailto:william@resonova.com">william@resonova.com</a></span>
+                    </div>
+                    <br>
+                    <div class="output">
+                        <span>voice&emsp; | <a href="tel:678-967-9123">+1 678-967-8123</a></span>
+                    </div>
+                    <br>
+                    <div class="output">
+                        <span>office&emsp;| <a href="https://goo.gl/maps/EWPHtGPNdpP2">1100 Peachtree Street NE, Suite 250</a></span>
+                    </div>
+                    <div class="output">
+                        <span>&emsp;&emsp;&emsp;&emsp;
+                			<a href="https://goo.gl/maps/EWPHtGPNdpP2">Atlanta, GA 30309</a></span>
+                    </div>
+                    <br><br>
+                    <div class="output">
+                        <span>social&emsp;| <a href="https://www.linkedin.com/in/willthompsonpro/">LinkedIn</a>
+                    	--
+                    	<a href="https://www.facebook.com/willinspireofficial/">Facebook</a>
+                    	--
+                        <a href="https://t.me/willinspire">Telegram</a></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.hoverintent/1.9.0/jquery.hoverIntent.min.js"></script>
+</body>
+
+</html>
