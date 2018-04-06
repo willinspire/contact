@@ -229,16 +229,13 @@
     
     <!-- Customized Animations -->
     <style>
+    
+    	/* SLIT-IN-DIAGONAL-2 */
+        
         .slit-in-diagonal-2 {
             -webkit-animation: slit-in-diagonal-2 0.7s both;
             animation: slit-in-diagonal-2 0.7s both;
         }
-        
-        .color-change-2x {
-			-webkit-animation: color-change-2x 1s ease-in-out infinite alternate both;
-	        animation: color-change-2x 1s ease-in-out infinite alternate both;
-		}
-        
         @-webkit-keyframes slit-in-diagonal-2 {
             0% {
                 -webkit-transform: translateZ(-800px) rotate3d(-1, 1, 0, -90deg);
@@ -261,7 +258,6 @@
                 animation-timing-function: ease-out;
             }
         }
-        
         @keyframes slit-in-diagonal-2 {
             0% {
                 -webkit-transform: translateZ(-800px) rotate3d(-1, 1, 0, -90deg);
@@ -285,21 +281,62 @@
             }
         }
         
-        @-webkit-keyframes color-change-2x {
+        /* COLOR-CHANGE-2xA */
+        
+        .color-change-2xA {
+			-webkit-animation: color-change-2xA 3s ease-in-out infinite alternate both;
+	        animation: color-change-2xA 3s ease-in-out infinite alternate both;
+		}
+        @-webkit-keyframes color-change-2xA {
   			0% {
     			background: rgba(21, 68, 140, 0.35);
   			}
+            50% {
+    			background: rgba(0, 0, 0, 0.35);
+  			}
   			100% {
-    			background: rgba(21, 68, 140, 0.75);
+    			background: rgba(21, 68, 140, 0.35);
+  			}
+		}
+		@keyframes color-change-2xA {
+  			0% {
+    			background: rgba(21, 68, 140, 0.35);
+  			}
+            50% {
+    			background: rgba(0, 0, 0, 0.35);
+  			}
+  			100% {
+    			background: rgba(21, 68, 140, 0.35);
   			}
 		}
         
-		@keyframes color-change-2x {
+        /* COLOR-CHANGE-2xB */
+        
+        .color-change-2xB {
+			-webkit-animation: color-change-2xB 3s ease-in-out infinite alternate both;
+	        animation: color-change-2xB 3s ease-in-out infinite alternate both;
+		}
+        @-webkit-keyframes color-change-2xB {
   			0% {
+    			background: rgba(0, 0, 0, 0.35);
+  			}
+            50% {
     			background: rgba(21, 68, 140, 0.35);
   			}
   			100% {
-    			background: rgba(21, 68, 140, 0.75);
+    			background: rgba(0, 0, 0, 0.55);
+  			}
+		}
+        
+		@keyframes color-change-2xB {
+  			0% {
+    			background: rgba(0, 0, 0, 0.35);
+  			}
+            50% {
+    			background: rgba(21, 68, 140, 0.35);
+  			}
+  			100% {
+    			background: rgba(0, 0, 0, 0.55);
   			}
 		}
     </style>
@@ -314,7 +351,7 @@
         <div class="wrapper">
             <!--<div class="shell-wrapper animated flipInY">-->
             <div class="shell-wrapper slit-in-diagonal-2">
-                <div class="shell-top-bar">
+                <div class="shell-top-bar color-change-2xB">
                     <div class="output fs-1">
                         <h4>&emsp;WILLIAM THOMPSON</h4></div>
                     <div class="output fs-2">&emsp;&emsp;Founder & Lead Consultant</div>
@@ -323,7 +360,7 @@
                     <!--<span class="output">___________________________________________</span>
                     </div>-->
                 </div>
-                <div class="shell-body color-change-2x">
+                <div class="shell-body color-change-2xA">
                     <div class="output">
                         <span>email&emsp; | <a href="mailto:william@resonova.com">william@resonova.com</a></span>
                     </div>
